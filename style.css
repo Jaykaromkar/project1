@@ -1,0 +1,45 @@
+/* Reset default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color:greenyellow;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color:green(218, 4, 4);
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color:greenyellow;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Specific page styles can be added here */

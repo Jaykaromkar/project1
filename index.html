@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Management</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Management</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            .slider-container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                margin-top: 20px;
+            }
+    
+            .slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+            .slide {
+                min-width: 100%;
+                box-sizing: border-box;
+            }
+    
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+    
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.4s ease;
+                border-radius: 0 3px 3px 0;
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+    
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+    
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        </style>
+    
+</head>
+<body>
+    <header>
+        <h1></h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide"><img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant Image 1"></div>
+                <div class="slide"><img src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant Image 2"></div>
+                <div class="slide"><img src="https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant Image 3"></div>
+                <div class="slide"><img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant Image 3"></div>
+            </div>
+        
+            <div class="prev" onclick="plusSlide(-1)">&#10094;</div>
+            <div class="next" onclick="plusSlide(1)">&#10095;</div>
+        </div>
+        
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+        
+            function plusSlide(n) {
+                showSlides(slideIndex += n);
+            }
+        
+            function showSlides(n) {
+                let i;
+                const slides = document.getElementsByClassName("slide");
+        
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+        
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+        
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+        
+                slides[slideIndex - 1].style.display = "block";
+            }
+        
+            // Automatic sliding
+            setInterval(function() {
+                plusSlide(1);
+            }, 5000); // Change slide every 5 seconds (adjust as needed)
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Restaurant Management</p>
+    </footer>
+    
+    
+</body>11887/
+</html>

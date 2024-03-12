@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="omkar.css">
+    <title>Restaurant Payment</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Add additional styles for your content here */
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Add more styles for other sections of your website */
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+        
+    
+
+    <div class="container">
+        <h1>Payment Details</h1>
+        <form action="process_payment.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name on Card</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiration">Expiration Date (MM/YY)</label>
+                <input type="text" id="expiration" name="expiration" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <div class="form-group">
+                <label for="total-amount">Total Amount</label>
+                <input type="text" id="total-amount" name="total-amount" required>
+            </div>
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+</body>
+</html>
